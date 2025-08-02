@@ -1,13 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import {Routes,Route} from 'react-router-dom'
+import Layout from './components/layout'
+import HomePage from './pages/Homepage'
+import SortingPage from './pages/SortingPage'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
-    <>
-      <h1> Algo Analyisis Tool</h1>
-    </>
+    <Routes>
+      <Route path='/' element= { <Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path='/sort' element={<SortingPage />} />
+      </Route>
+    </Routes>
   )
 }
 
