@@ -8,7 +8,7 @@ import './assets/styles.css';
 createRoot(document.getElementById('root')).render(
   
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Algorithm-Analysis/">
     <App />
     </BrowserRouter>
     
