@@ -13,6 +13,11 @@ const Layout = () => {
                 <main className="mt-8">
                     <Outlet />
                 </main>
+                <footer className="text-center mt-12 text-gray-500 text-sm">
+          <p>
+            Made with ❤️ by msdhundhiya
+          </p>
+        </footer>
             </div>
         </div>
     
