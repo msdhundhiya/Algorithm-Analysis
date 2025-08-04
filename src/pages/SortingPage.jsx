@@ -1,10 +1,17 @@
 import React from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import { useSorting } from '../hooks/useSorting';
+import { codeExamples } from '../data/codeExamples';
 import DataInput from '../components/DataInput';
 import Results from '../components/Results';
 import { PlayIcon, ResetIcon } from '../components/Icons';
 
-const SortingPage = () => {    
+const SortingPage = () => { 
+    
+  const {algorithm} = useParams();
+  if (!codeExamples[algorithm]){
+    return <Navigate to="/" replace/>
+  }
   const{
         currentData,
         sortingStats,
@@ -14,10 +21,12 @@ const SortingPage = () => {
         handleFileLoad,
         resetData,
         startSorting,
-  } = useSorting();
+  } = useSorting(algorithm);
+
+  const algoInfo =codeExamples[algorithm];
 
   return <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-800 tracking-tight">Bubble Sort</h2>
+            <h2 className="text-3xl font-bold text-gray-800 tracking-tight">{algoInfo.name}</h2>
             <DataInput 
                 manualInput={manualInput}
                 setManualInput={setManualInput}

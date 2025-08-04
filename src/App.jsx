@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path='/' element= { <Layout />}>
         <Route index element={<HomePage />} />
-        <Route path='/sort' element={<SortingPage />} />
+        <Route path='/sort/:algorithm' element={<SortingPage />} />
       </Route>
     </Routes>
   )

@@ -11,7 +11,7 @@ const HomePage = () => {
             Choose a sorting algorithm from the navigation above to see its performance statistics and code examples in various languages.
         </p>
         <Link 
-            to="/sort" 
+            to="/sort/bubble" 
             className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition text-lg shadow-md"
         >
             Get Started

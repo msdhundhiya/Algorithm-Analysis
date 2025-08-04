@@ -12,7 +12,7 @@ const Results = ({ stats, data }) => {
                 </div>
                 <div className="bg-yellow-50 p-4 rounded-lg">
                     <p className="text-sm text-yellow-500 font-semibold">Comparisons</p>
-                    <p className="text-2xl font-bold text-yellow-800">{stats.comparisions}</p>
+                    <p className="text-2xl font-bold text-yellow-800">{stats.comparisons}</p>
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg">
                     <p className="text-sm text-purple-500 font-semibold">Swaps / Writes</p>
